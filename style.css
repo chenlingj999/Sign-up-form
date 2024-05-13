@@ -14,6 +14,7 @@ body {
 #left {
     width: 35vw;
     background-size: cover;
+    position: relative;
 }
 
 #right {
@@ -29,11 +30,13 @@ body {
     background-color: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
+    position: relative;
+    top: 30%;
 }
 
 #odin {
-    max-height: 90%;
-    width: auto;
+    width: 15%;
+    height: auto;
 }
 
 .logoName {
@@ -41,4 +44,19 @@ body {
     font-family: norse-bold, 'Times New Roman';
     color: white;
     font-size: 6.5rem;
+}
+
+.reference {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-size: 0.8rem;
+}
+
+.reference a {
+    color: white;
 }
