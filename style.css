@@ -3,6 +3,15 @@
     src: url(Norse-Bold.otf);
 }
 
+@font-face {
+    font-family: 'agan_sregular';
+    src: url('agane_55_roman_sign-webfont.woff2') format('woff2'),
+         url('agane_55_roman_sign-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 body {
     display: flex;
     flex-direction: row;
@@ -22,6 +31,7 @@ body {
     flex-direction: column;
     width: 65vw;
     align-items: center;
+    font-family: 'agan_sregular';
 }
 
 .logo {
@@ -54,7 +64,7 @@ body {
     width: 100%;
     text-align: center;
     color: white;
-    font-size: 0.8rem;
+    font-size: 1rem;
 }
 
 .reference a {
@@ -84,4 +94,42 @@ body {
     font-weight: 600;
     left: 5%;
     bottom: 10%;
+    max-width: 60ch;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.form fieldset {
+    border: 0;
+}
+
+.submit {
+    p {
+        font-size: 1.2rem;
+        position: relative;
+        left: 5%;
+        top: 10%;
+    }
+    p > a {
+        color: #596D48;
+        text-decoration: none;
+        font-weight: bold;
+    }
+    button {
+        position: relative;
+        left: 5%;
+        top: 7%;
+        background-color: #596D48;
+        border: 0;
+        border-radius: 10px;
+        color: white;
+        font-weight: bold;
+        font-size: 1.2rem;
+        padding: 15px 50px;
+        cursor: pointer;
+    }
 }
