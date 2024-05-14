@@ -1,12 +1,16 @@
-const password = document.querySelector("input#password");
+const password = document.querySelector("input#pass");
 const confirm = document.querySelector("input#confirm");
-const submit = document.querySelector(".submit-btn");
+const error = document.querySelector("p.error");
 
 // Upon button press check if both passwords are identical
-submit.addEventListener('click', function(e) {
-    if (password.value != confirm.value) {
-        e.preventDefault();
-        confirm.setCustomValidity('* Passwords do not match');
-        confirm.reportValidity();
+confirm.addEventListener('input', () => {
+    if (password.value !== confirm.value) {
+        confirm.classList.add("invalid");
+        password.classList.add("invalid");
+        error.innerText = "* Passwords do not match"
+    } else {
+        confirm.classList.remove("invalid");
+        password.classList.remove("invalid");
+        error.innerText = ""
     }
 });
